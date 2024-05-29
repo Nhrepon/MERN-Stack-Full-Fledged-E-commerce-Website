@@ -1,5 +1,6 @@
 const UserModel=require('../model/UserModel');
 const SendEmail = require('../utility/SendEmail');
+const { encodeToken } = require('../utility/TokenHelper');
 
 exports.UserOTP = async (req, res)=>{
     try {
@@ -26,9 +27,15 @@ exports.VerifyLogin = async (req, res)=>{
         const {email, otp}=req.body;
         const user=await UserModel.find({email:email, otp:otp});
         if(user.length>0){
-            const token=
+            const token=encodeToken(email);
+            const cookieOption={expires:new Date(Date.now()+3*24*60*60*1000), httpOnly:true}
+            res.cookie('token', token, cookieOption);
+            //await UserModel.updateOne({email:email, otp:otp}, $set={otp:""});
+            res.json({status:"Success", data:token});
+        }else{
+            res.json({status:"Failed", message:"Invalid OTP"});
         }
-        res.json({status:"Success", data:data});
+        
     } catch (error) {
         res.json({status:"Failed", message:error});
     }
@@ -42,8 +49,8 @@ exports.VerifyLogin = async (req, res)=>{
 
 exports.UserLogout = async (req, res)=>{
     try {
-        
-        res.json({status:"Success", data:" "});
+        res.clearCookie('token');
+        res.json({status:"Success", data:"Logout success"});
     } catch (error) {
         res.json({status:"Failed", message:error});
     }
