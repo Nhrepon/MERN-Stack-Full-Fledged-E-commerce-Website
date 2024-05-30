@@ -1,9 +1,9 @@
 const jwt=require('jsonwebtoken');
 
-exports.encodeToken=(email)=>{
-    const payload={email:email};
+exports.encodeToken=(email, userId)=>{
+    const payload={email:email, userId:userId};
     const key=process.env.TOKEN_KEY;
-    const expireTime={expiresIn:'1d'};
+    const expireTime={expiresIn:'7d'};
     return jwt.sign(payload, key, expireTime);
 }
 

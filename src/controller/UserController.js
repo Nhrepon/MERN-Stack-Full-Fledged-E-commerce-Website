@@ -27,8 +27,8 @@ exports.VerifyLogin = async (req, res)=>{
         const {email, otp}=req.body;
         const user=await UserModel.find({email:email, otp:otp});
         if(user.length>0){
-            const token=encodeToken(email);
-            const cookieOption={expires:new Date(Date.now()+3*24*60*60*1000), httpOnly:true}
+            const token=encodeToken(email, user[0]._id);
+            const cookieOption={expires:new Date(Date.now()+7*24*60*60*1000), httpOnly:true}
             res.cookie('token', token, cookieOption);
             //await UserModel.updateOne({email:email, otp:otp}, $set={otp:""});
             res.json({status:"Success", data:token});

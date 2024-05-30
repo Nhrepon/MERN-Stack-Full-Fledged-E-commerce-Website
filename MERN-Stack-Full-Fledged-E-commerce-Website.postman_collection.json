@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "3b9871ca-037c-4983-abbc-fdf600e925ea",
+		"name": "MERN-Stack-Full-Fledged-E-commerce-Website",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32568510",
+		"_collection_link": "https://www.postman.com/winter-meteor-116465/workspace/mern/collection/32568510-3b9871ca-037c-4983-abbc-fdf600e925ea?action=share&source=collection_link&creator=32568510"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "ProductBrandList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/ProductBrandList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductBrandList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductCategoryList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductCategoryList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductCategoryList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductSliderList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductSliderList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductSliderList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductListByBrand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductListByBrand/64f8751a502e1b80556da142",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductListByBrand",
+								"64f8751a502e1b80556da142"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductListByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductListByCategory/64f875ed502e1b80556da14d",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductListByCategory",
+								"64f875ed502e1b80556da14d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductListBySimilar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductListBySimilar/64f875ed502e1b80556da14d",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductListBySimilar",
+								"64f875ed502e1b80556da14d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductListByKeyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductListByKeyword/asus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductListByKeyword",
+								"asus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductListByRemark",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductListByRemark/new",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductListByRemark",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductDetails/654dbf25abda0c85053c9902",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductDetails",
+								"654dbf25abda0c85053c9902"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductReviewList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ProductReviewList/64f8ba608fcc62fe3de37a2e",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ProductReviewList",
+								"64f8ba608fcc62fe3de37a2e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "UserOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nhmarket.com@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/UserOTP",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"UserOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyLogin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nhmarket.com@gmail.com\",\r\n    \"otp\":\"333001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/VerifyLogin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"VerifyLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/UserLogout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"UserLogout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nhmarket.com@gmail.com\",\r\n    \"otp\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/CreateProfile",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"CreateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nurhossainrepon7248@gmail.com\",\r\n    \"otp\": \"111222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/UpdateProfile",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"UpdateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nurhossainrepon7248@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/ReadProfile",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ReadProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wishes",
+			"item": [
+				{
+					"name": "SaveWishList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"654dbf25abda0c85053c9902\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/SaveWishList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"SaveWishList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveWishList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"654dbf25abda0c85053c9902\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/RemoveWishList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"RemoveWishList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WishList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/WishList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"WishList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "SaveCartList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"654dbf25abda0c85053c9902\",\r\n\t\t\"color\":\"red\",\r\n\t\t\"qty\":\"20\",\r\n\t\t\"size\":\"XL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/SaveCartList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"SaveCartList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveCartList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"654dbf25abda0c85053c9902\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/RemoveCartList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"RemoveCartList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CartList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/CartList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"CartList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:2000/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5obWFya2V0LmNvbUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2NjU1NmYxYTQ4NGVlNzQ0NWEwMjg4OGEiLCJpYXQiOjE3MTcwODU1NDIsImV4cCI6MTcxNzY5MDM0Mn0.hBo3-7ba3QJ-xlt7jbc4W8_mV4DI8nEZ5u07kMZ7w9A",
+			"type": "string"
+		}
+	]
+}

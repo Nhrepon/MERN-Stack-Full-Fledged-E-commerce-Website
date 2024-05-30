@@ -1,7 +1,19 @@
 const express=require('express');
 const router=express.Router();
+const AuthMiddleware=require('../middleware/AuthMiddleware');
 const UserController=require('../controller/UserController');
-const { ProductBrandList, ProductCategoryList, ProductSliderList, ProductListByBrand } = require('../controller/ProductController');
+const { ProductBrandList, 
+    ProductCategoryList, 
+    ProductSliderList, 
+    ProductListByBrand, 
+    ProductListByCategory, 
+    ProductListBySimilar,
+    ProductListByKeyword,
+    ProductListByRemark,
+    ProductDetails,
+    ProductReviewList} = require('../controller/ProductController');
+const { SaveWishList, RemoveWishList, WishList } = require('../controller/WishController');
+const { SaveCartList, RemoveCartList, CartList } = require('../controller/CartController');
 
 
 
@@ -9,14 +21,14 @@ const { ProductBrandList, ProductCategoryList, ProductSliderList, ProductListByB
 
 router.get('/ProductBrandList', ProductBrandList);
 router.get('/ProductCategoryList', ProductCategoryList);
-router.get('/ProductSliderList', ProductSliderList)
-router.get('/ProductListByBrand/:BrandID', ProductListByBrand)
-router.get('/ProductListByCategory/:CategoryID')
-router.get('/ProductListBySimilar/:CategoryID')
-router.get('/ProductListByKeyword/:Keyword')
-router.get('/ProductListByRemark/:Remark')
-router.get('/ProductDetails/:ProductID')
-router.get('/ProductReviewList/:ProductID')
+router.get('/ProductSliderList', ProductSliderList);
+router.get('/ProductListByBrand/:BrandID', ProductListByBrand);
+router.get('/ProductListByCategory/:CategoryID', ProductListByCategory);
+router.get('/ProductListBySimilar/:CategoryID', ProductListBySimilar);
+router.get('/ProductListByKeyword/:Keyword', ProductListByKeyword);
+router.get('/ProductListByRemark/:Remark', ProductListByRemark);
+router.get('/ProductDetails/:ProductID', ProductDetails);
+router.get('/ProductReviewList/:ProductID', ProductReviewList)
 
 
 router.get('/UserOTP', UserController.UserOTP);
@@ -27,14 +39,14 @@ router.post('/UpdateProfile', UserController.UpdateProfile);
 router.get('/ReadProfile', UserController.ReadProfile);
 
 
-router.post('/SaveWishList')
-router.post('/RemoveWishList')
-router.get('/WishList')
+router.post('/SaveWishList', AuthMiddleware, SaveWishList);
+router.post('/RemoveWishList', AuthMiddleware, RemoveWishList);
+router.get('/WishList', AuthMiddleware, WishList);
 
 
-router.post('/SaveCartList')
-router.post('/RemoveCartList')
-router.get('/CartList')
+router.post('/SaveCartList', AuthMiddleware, SaveCartList);
+router.post('/RemoveCartList', AuthMiddleware, RemoveCartList);
+router.get('/CartList', AuthMiddleware, CartList);
 
 
 
